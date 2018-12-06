@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Paint</string>
+    <string name="Alpha">A</string>
+    <string name="Red">R</string>
+    <string name="Green">G</string>
+    <string name="Blue">B</string>
+    <string name="clear">Clear</string>
+
+</resources>

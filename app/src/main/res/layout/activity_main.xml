@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.donkey.paint.MainActivity">
+
+    <!--Labels and SeekBars-->
+    <TextView
+        android:id="@+id/labelAlpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Alpha"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <SeekBar
+        android:id="@+id/seekAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/labelAlpha"
+        android:layout_toRightOf="@id/labelAlpha"
+        android:max="255"
+        android:progress="255"
+        android:layout_toEndOf="@id/labelAlpha" />
+
+    <TextView
+        android:id="@+id/labelRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelAlpha"
+        android:text="@string/Red"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/labelRed"
+        android:layout_below="@+id/seekAlpha"
+        android:layout_toRightOf="@+id/labelRed"
+        android:max="255"
+        android:progress="100"
+        android:layout_toEndOf="@+id/labelRed" />
+
+    <TextView
+        android:id="@+id/labelGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelRed"
+        android:text="@string/Green"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/labelGreen"
+        android:layout_below="@+id/seekRed"
+        android:layout_toRightOf="@+id/labelGreen"
+        android:max="255"
+        android:progress="167"
+        android:layout_toEndOf="@+id/labelGreen" />
+
+    <TextView
+        android:id="@+id/labelBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelGreen"
+        android:text="@string/Blue"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <SeekBar
+        android:id="@+id/seekBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/labelBlue"
+        android:layout_below="@+id/seekGreen"
+        android:layout_toRightOf="@+id/labelBlue"
+        android:max="255"
+        android:progress="11"
+        android:layout_toEndOf="@+id/labelBlue" />
+
+    <!--Custom view layout for the Paint canvas-->
+    <com.example.donkey.paint.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1" />
+    <!--For displaying the color bar-->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelBlue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        android:gravity="end"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+
+
+</RelativeLayout>
